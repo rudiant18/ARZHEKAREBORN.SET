@@ -18,11 +18,12 @@
             line-height: 1.6;
         }
 
-        /* Banner Atas */
+        /* Banner Atas dengan Background arzheka.jpeg */
         .hero-banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200') no-repeat center center/cover;
+            /* Di sini kita panggil arzheka.jpeg sebagai background */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('arzheka.jpeg') no-repeat center center/cover;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             border-bottom: 3px solid #ff4500;
         }
 
@@ -31,6 +32,7 @@
             letter-spacing: 2px;
             color: #ffffff;
             margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
         .hero-banner p {
@@ -38,6 +40,7 @@
             color: #ff4500;
             font-weight: bold;
             text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
 
         /* Kontainer Utama */
@@ -123,7 +126,7 @@
             width: 90px;
             height: 90px;
             object-fit: cover; /* Biar gambar tidak gepeng */
-            background-color: #333;
+            background-color: #000;
             border-radius: 8px;
             margin-right: 15px;
             flex-shrink: 0;
@@ -236,7 +239,6 @@
 
     <main class="container">
         
-        <!-- Form Isi Data Pembeli -->
         <div class="identity-box">
             <h3>📝 Isi Data Pembeli Terlebih Dahulu:</h3>
             <div class="form-group">
@@ -253,9 +255,8 @@
         
         <div class="product-list">
 
-            <!-- Produk 1 (Harga 150k) -->
             <div class="product-card">
-                <img src="arzheka.jpg" class="product-img" alt="Set 150k">
+                <img src="arzheka.jpeg" class="product-img" alt="Set 150k">
                 <div class="product-info">
                     <div class="product-title">SET 2026 BULAN APRIL 🔥🔥</div>
                     <div class="product-desc">Manual & Semi. Angkatan mantap.</div>
@@ -270,9 +271,8 @@
                 </div>
             </div>
 
-            <!-- Produk 2 (Harga 100k) -->
             <div class="product-card">
-                <img src="arzheka.jpg" class="product-img" alt="Set 100k">
+                <img src="arzheka.jpeg" class="product-img" alt="Set 100k">
                 <div class="product-info">
                     <div class="product-title">SET ARZHEKA BULAN MARET 🔥🔥🔥</div>
                     <div class="product-desc">SET TERBARU. Suara joss angkatan mantap full lengkap.</div>
@@ -287,9 +287,8 @@
                 </div>
             </div>
 
-            <!-- Produk 3 (Harga 50k) -->
             <div class="product-card">
-                <img src="arzheka.jpg" class="product-img" alt="Set 50k">
+                <img src="arzheka.jpeg" class="product-img" alt="Set 50k">
                 <div class="product-info">
                     <div class="product-title">SET ARZHEKA (Promo 50k)</div>
                     <div class="product-desc">Jandhut Soraya, Sampuno 2026 dll.</div>
@@ -311,7 +310,6 @@
         <p>&copy; 2026 ARZHEKA REBORN. All Rights Reserved.</p>
     </footer>
 
-    <!-- Sistem JavaScript Pendeteksi Data -->
     <script>
         function beliProduk(namaProduk) {
             const nama = document.getElementById('buyer-name').value.trim();
@@ -322,8 +320,8 @@
                 return;
             }
 
-            // GANTI NOMOR WA KAMU DI SINI (Gunakan kode 62 di depan)
-            const nomorWA = "6285876917000"; 
+            // Nomor WA 
+            const nomorWA = "6285870917760"; 
 
             const teksPesan = `Halo Arzheka Reborn, saya ingin membeli:\n\n` +
                               `📦 *Produk:* ${namaProduk}\n` +
