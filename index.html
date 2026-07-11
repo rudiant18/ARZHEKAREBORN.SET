@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARZHEKA REBORN - Set Murah Rasa Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Banner Atas */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200') no-repeat center center/cover;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 3px solid #ff4500;
+        }
+
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .hero-banner p {
+            font-size: 1.1rem;
+            color: #ff4500;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Form Identitas */
+        .identity-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px dashed #ff4500;
+        }
+
+        .identity-box h3 {
+            margin-bottom: 15px;
+            color: #ff4500;
+            font-size: 1.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background-color: #2a2a2a;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff4500;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff4500;
+            padding-left: 10px;
+        }
+
+        /* Daftar Produk */
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #333;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            border-color: #ff4500;
+        }
+
+        /* Setingan Gambar Supaya Rapi */
+        .product-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover; /* Biar gambar tidak gepeng */
+            background-color: #333;
+            border-radius: 8px;
+            margin-right: 15px;
+            flex-shrink: 0;
+            border: 1px solid #444;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 8px;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .price-now {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2ecc71;
+        }
+
+        .price-was {
+            font-size: 0.9rem;
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        /* Grup Tombol Beli & YouTube */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap; /* Jika layar kecil, tombol akan ke bawah */
+        }
+
+        .btn-buy {
+            background-color: #2ecc71; /* Warna hijau WA */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: center;
+        }
+
+        .btn-buy:hover {
+            background-color: #27ae60;
+        }
+
+        .btn-yt {
+            background-color: #ff0000; /* Warna merah YouTube */
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background 0.2s;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-yt:hover {
+            background-color: #cc0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 40px;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 600px) {
+            .hero-banner h1 { font-size: 2rem; }
+            .product-card { padding: 12px; flex-direction: column; align-items: flex-start; }
+            .product-img { width: 100%; height: 150px; margin-right: 0; margin-bottom: 15px; }
+            .product-title { font-size: 1rem; }
+            .action-buttons { width: 100%; }
+            .btn-buy, .btn-yt { flex-grow: 1; text-align: center; justify-content: center;}
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-banner">
+        <h1>ARZHEKA REBORN</h1>
+        <p>SET MURAH RASA PREMIUM</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Form Isi Data Pembeli -->
+        <div class="identity-box">
+            <h3>📝 Isi Data Pembeli Terlebih Dahulu:</h3>
+            <div class="form-group">
+                <label for="buyer-name">Nama Lengkap:</label>
+                <input type="text" id="buyer-name" placeholder="Masukkan nama kamu...">
+            </div>
+            <div class="form-group">
+                <label for="buyer-device">Device ID ORG:</label>
+                <input type="text" id="buyer-device" placeholder="Contoh: 12A34F56...">
+            </div>
+        </div>
+
+        <h2 class="section-title">Katalog Style ORG Terbaru</h2>
+        
+        <div class="product-list">
+
+            <!-- Produk 1 (Harga 150k) -->
+            <div class="product-card">
+                <img src="arzheka.jpg" class="product-img" alt="Set 150k">
+                <div class="product-info">
+                    <div class="product-title">SET 2026 BULAN APRIL 🔥🔥</div>
+                    <div class="product-desc">Manual & Semi. Angkatan mantap.</div>
+                    <div class="price-container">
+                        <span class="price-now">Rp 150.000</span>
+                        <span class="price-was">Rp 250.000</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button onclick="beliProduk('SET 2026 BULAN APRIL (150k)')" class="btn-buy">🛒 Beli via WA</button>
+                        <a href="https://youtu.be/DZEr4IbrAs8?feature=shared" target="_blank" class="btn-yt">▶ Preview YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 2 (Harga 100k) -->
+            <div class="product-card">
+                <img src="arzheka.jpg" class="product-img" alt="Set 100k">
+                <div class="product-info">
+                    <div class="product-title">SET ARZHEKA BULAN MARET 🔥🔥🔥</div>
+                    <div class="product-desc">SET TERBARU. Suara joss angkatan mantap full lengkap.</div>
+                    <div class="price-container">
+                        <span class="price-now">Rp 100.000</span>
+                        <span class="price-was">Rp 200.000</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button onclick="beliProduk('SET ARZHEKA BULAN MARET (100k)')" class="btn-buy">🛒 Beli via WA</button>
+                        <a href="https://youtu.be/emRYOBNIlXI?feature=shared" target="_blank" class="btn-yt">▶ Preview YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 3 (Harga 50k) -->
+            <div class="product-card">
+                <img src="arzheka.jpg" class="product-img" alt="Set 50k">
+                <div class="product-info">
+                    <div class="product-title">SET ARZHEKA (Promo 50k)</div>
+                    <div class="product-desc">Jandhut Soraya, Sampuno 2026 dll.</div>
+                    <div class="price-container">
+                        <span class="price-now">Rp 50.000</span>
+                        <span class="price-was">Rp 150.000</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button onclick="beliProduk('SET ARZHEKA Promo (50k)')" class="btn-buy">🛒 Beli via WA</button>
+                        <a href="https://youtu.be/os0eJARmH6w?feature=shared" target="_blank" class="btn-yt">▶ Preview YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ARZHEKA REBORN. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Sistem JavaScript Pendeteksi Data -->
+    <script>
+        function beliProduk(namaProduk) {
+            const nama = document.getElementById('buyer-name').value.trim();
+            const deviceId = document.getElementById('buyer-device').value.trim();
+            
+            if (nama === "" || deviceId === "") {
+                alert("Silakan isi Nama dan Device ID kamu terlebih dahulu di kolom atas!");
+                return;
+            }
+
+            // GANTI NOMOR WA KAMU DI SINI (Gunakan kode 62 di depan)
+            const nomorWA = "6285876917000"; 
+
+            const teksPesan = `Halo Arzheka Reborn, saya ingin membeli:\n\n` +
+                              `📦 *Produk:* ${namaProduk}\n` +
+                              `👤 *Nama:* ${nama}\n` +
+                              `🆔 *Device ID:* ${deviceId}`;
+
+            const urlWhatsApp = `https://wa.me/${nomorWA}?text=${encodeURIComponent(teksPesan)}`;
+
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
